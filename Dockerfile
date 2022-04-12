@@ -1,5 +1,5 @@
 FROM python:3.9.12-alpine3.15
-RUN pip3 install requests Flask Pillow flask-cors -i https://mirrors.aliyun.com/pypi/simple/
+RUN pip3 install requests Flask Pillow flask-cors
 LABEL maintainer=admin@lilu.org.cn
 RUN mkdir /app
 WORKDIR /app
