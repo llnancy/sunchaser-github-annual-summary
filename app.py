@@ -15,7 +15,7 @@ CORS(app, supports_credentials=True)
 @app.route('/github',methods=["GET"])
 def hello_world():
     github_id = request.args.get("github_id")
-    github_token =
+    github_token = app.get['github_token']
     print(github_id)
     ar = AnnualReport(github_id=github_id, github_token=)
     if not ar.check_user_data():
