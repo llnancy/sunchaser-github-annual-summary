@@ -9,13 +9,13 @@ from wsgiref.simple_server import make_server
 from flask_cors import CORS
  
 app = Flask(__name__, static_folder="static", static_url_path="/static")
-app.config['github_token'] = os.getenv('github_token', '')
+app.config.get('github_token') = os.getenv('github_token', '')
 CORS(app, supports_credentials=True)
  
 @app.route('/github',methods=["GET"])
 def hello_world():
     github_id = request.args.get("github_id")
-    github_token = app.get['github_token']
+    github_token = app.config.get('github_token')
     print(github_id)
     ar = AnnualReport(github_id=github_id, github_token=github_token)
     if not ar.check_user_data():
