@@ -10,9 +10,9 @@ class AnnualReport:
 
     IMAGE_FILE_PATH = "./static/template/sunchaser-github.png"
 
-    def __init__(self, github_id):
+    def __init__(self, github_id, github_token):
         self.github_id = github_id
-        self.g = Github("f1c64bac70b4744b55082aa58bb100da8cc6ede3")
+        self.g = Github(github_token)
         self.data = self.get_data()
         
     def get_data(self):
