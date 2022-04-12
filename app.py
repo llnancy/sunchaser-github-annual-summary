@@ -17,7 +17,7 @@ def hello_world():
     github_id = request.args.get("github_id")
     github_token = app.get['github_token']
     print(github_id)
-    ar = AnnualReport(github_id=github_id, github_token=)
+    ar = AnnualReport(github_id=github_id, github_token=github_token)
     if not ar.check_user_data():
         return '该GitHub用户不存在'
     else:
