@@ -1,4 +1,4 @@
-FROM python:3.9.12-alpine3.15
+FROM python:3.8-alpine
 RUN pip3 install requests Flask Pillow flask-cors
 LABEL maintainer=admin@lilu.org.cn
 RUN mkdir /app
