@@ -9,7 +9,7 @@ from wsgiref.simple_server import make_server
 from flask_cors import CORS
  
 app = Flask(__name__, static_folder="static", static_url_path="/static")
-app.config.get('github_token') = os.getenv('github_token', '')
+app.config['github_token'] = os.getenv('github_token', '')
 CORS(app, supports_credentials=True)
  
 @app.route('/github',methods=["GET"])
