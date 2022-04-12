@@ -94,7 +94,7 @@ class AnnualReport:
                     pre = False
                 else:
                     # 判断是哪一年
-                    if day['date'].split('-')[0] == '2020':
+                    if day['date'].split('-')[0] == '2021':
                         # 计算有贡献的天数
                         total_day += 1
                     # 今天有提交记录
@@ -119,7 +119,7 @@ class AnnualReport:
         font = ImageFont.truetype("./font/hua-wen-hei-ti.ttf", 50) # 微软雅黑字体
         drawImage.text((370, 58), name, fill="#FFFFFF", font=font)
         # todo
-        drawImage.text((370, 130), "2020 GitHub 年度报告", fill="#FFFFFF", font=font)
+        drawImage.text((370, 130), "2021 GitHub 年度报告", fill="#FFFFFF", font=font)
         # 字体初始化
         # 大标题字体设置
         big_title_size = 60
@@ -138,7 +138,7 @@ class AnnualReport:
         drawImage.text((left_top_x - percent_w, 504), percent, fill=big_title_color, font=big_title_font)
 
         # todo
-        precent_text0 = "2020 年有 365 天"
+        precent_text0 = "2021 年有 365 天"
         precent_text0_w, percent_text0_h = drawImage.textsize(precent_text0, font=text_font)
         drawImage.text((left_top_x - precent_text0_w, 587), precent_text0, fill=text_color, font=text_font)
 
@@ -184,7 +184,7 @@ class AnnualReport:
         followers = format(followers, ',')
         drawImage.text((right_bottom_x, 1598), followers, fill=big_title_color, font=big_title_font)
         # todo
-        drawImage.text((right_bottom_x, 1503), "至 2020 年，你共收获", fill=text_color, font=text_font)
+        drawImage.text((right_bottom_x, 1503), "至 2021 年，你共收获", fill=text_color, font=text_font)
         follower_text = "%s 位追随者" % followers
         drawImage.text((right_bottom_x, 1543), follower_text, fill=text_color, font=text_font)
 
@@ -199,10 +199,10 @@ class AnnualReport:
         # 6. 底部
         bottom_font_size = 26
         bottom_font = ImageFont.truetype("./font/fzlt.ttf", bottom_font_size)
-        bottom_text0 = "Powered by 打工这件小事";
+        bottom_text0 = "Powered by 打工这件小事"
         drawImage.text((452.5, 1766), bottom_text0, fill=text_color, font=bottom_font)
         bottom_text0_w, bottom_text0_h = drawImage.textsize(bottom_text0, font=bottom_font)
-        drawImage.text((452.5, 1775 + bottom_text0_h), "扫码查收你的 2020 开源报告", fill=text_color, font=bottom_font)
+        drawImage.text((452.5, 1775 + bottom_text0_h), "扫码查收你的 2021 开源报告", fill=text_color, font=bottom_font)
 
         # image.show()
         return image

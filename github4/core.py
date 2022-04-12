@@ -30,8 +30,8 @@ class Github:
         @param : 
         @return: 
         '''
-        begin = datetime(2019, 12, 30, 0, 0).isoformat()
-        end = datetime(2020, 12, 29, 0, 0).isoformat()
+        begin = datetime(2020, 12, 30, 0, 0).isoformat()
+        end = datetime(2021, 12, 29, 0, 0).isoformat()
         query = """
         {
             user(login: "%s") {

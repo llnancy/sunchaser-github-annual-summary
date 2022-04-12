@@ -25,6 +25,6 @@ def hello_world():
         return jsonify({'img_path': img_path})
 
 if __name__ == '__main__':
-    server = make_server('0.0.0.0',520,app)
+    server = make_server('0.0.0.0', 520, app)
     server.serve_forever()
     app.run()
