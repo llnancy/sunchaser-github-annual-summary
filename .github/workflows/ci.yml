@@ -23,18 +23,13 @@ jobs:
         run: |
           tar -zcvf github-annual-summary.tar.gz ./font ./github4 ./static .gitignore ./annual_report.py ./app.py ./requirement.txt
 
-      - name: Get version
-        id: version
-        run: |
-          echo ::set-output name=version::$(< version)
-
       - name: Set Docker image metadata
         id: docker_meta
         uses: docker/metadata-action@v3
         with:
           images: sunchaserlilu/github-annual-summary
           flavor: latest=true
-          tags: ${{ steps.version.outputs.version }}
+          tags: 2022
           labels: |
             maintainer=admin@lilu.org.cn
             org.opencontainers.image.title=github-annual-summary
